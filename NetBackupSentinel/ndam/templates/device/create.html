@@ -1,0 +1,30 @@
+{% include 'crud/create_update.html' %}
+
+
+<script>
+    // add button to modal-footer
+    var $modalFooter = $('.modal-footer');
+    var $button = $('<button type="button" id="btn_test_connection" class="btn btn-secondary">Test Connection</button>');
+    $modalFooter.append($button);
+
+    // add click event to button
+
+    $button.click(function () {
+        var $form = $('#form_create_update');
+        var $url = $form.attr('hx-post') + "?test_connection=1";
+        var $method = $form.attr('method');
+        // change value id_test_connection in form to true
+        $('#id_test_connection').val("true");
+        htmx.ajax($method, $url, {
+            source: $form[0],
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+
+        });
+
+    });
+
+
+
+</script>

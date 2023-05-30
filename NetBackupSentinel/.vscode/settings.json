@@ -1,0 +1,7 @@
+{
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "python.formatting.provider": "none",
+    "ansible.python.interpreterPath": "/home/dev-ark/.cache/pypoetry/virtualenvs/netbackupsentinel-uN-MByeV-py3.10/bin/python"
+}

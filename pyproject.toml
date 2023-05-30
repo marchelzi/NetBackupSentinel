@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "netbackupsentinel"
+version = "0.1.0"
+description = ""
+authors = ["Marchel Maulana Fahrezi <marchel@sti-group.co.id>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+django = "^4.2.1"
+paramiko = "^3.1.0"
+django-extensions = "^3.2.1"
+django-storages = {extras = ["azure"], version = "^1.13.2"}
+django-cryptography = "^1.1"
+django-ajax-datatable = "^4.4.5"
+django-crispy-forms = "^2.0"
+crispy-bootstrap5 = "^0.7"
+django-htmx = "^1.14.0"
+python-dotenv = "^1.0.0"
+
+
+[tool.poetry.group.dev.dependencies]
+notebook = "^6.5.4"
+flake8 = "^6.0.0"
+pre-commit = "^3.3.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
